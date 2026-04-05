@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FiscalIA | Conformidade que não depende de gente</title>
+  <meta name="description" content="Monitoramento contínuo de EPIs e normas regulatórias com IA on-premise. NR-6, NR-18, ANVISA. 24/7. Sem ronda humana.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#ff6b35',
+            'brand-dark': '#e55a2b',
+            cream: '#f8f5f0',
+            'cream-warm': '#fff0e8',
+            dark: '#1a1a1a',
+            danger: '#dc2626',
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; }
+    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="bg-cream">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-[76px] flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <svg class="w-8 h-8" viewBox="0 0 32 32"><path d="M16 1L3 7v8c0 8.3 5.5 16 13 18 7.5-2 13-9.7 13-18V7L16 1z" fill="#ff6b35"/></svg>
+        <span class="font-heading font-bold text-lg">FiscalIA</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#como-funciona" class="text-sm text-gray-600 hover:text-dark transition">Como funciona</a>
+        <a href="#verticais" class="text-sm text-gray-600 hover:text-dark transition">Verticais</a>
+        <a href="#demo" class="text-sm text-gray-600 hover:text-dark transition">Demo</a>
+        <a href="#contato" class="bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">Quero uma demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-cream pt-32 pb-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-6">FiscalIA</p>
+      <h1 class="font-heading font-bold text-5xl md:text-6xl leading-tight mb-6">Conformidade que não<br>depende de gente.</h1>
+      <p class="text-gray-600 text-lg leading-relaxed max-w-xl mx-auto mb-10">Monitoramento contínuo de EPIs e normas regulatórias<br>com IA on-premise. 24/7. Sem ronda humana.</p>
+      <div class="flex items-center justify-center gap-4 mb-14">
+        <a href="#contato" class="bg-brand hover:bg-brand-dark text-white font-semibold px-7 py-3.5 rounded-full transition">Quero uma demo</a>
+        <a href="#como-funciona" class="border-2 border-dark text-dark font-semibold px-7 py-3 rounded-full hover:bg-dark hover:text-white transition">Como funciona &darr;</a>
+      </div>
+      <div class="flex justify-center gap-6">
+        <div class="bg-white rounded-xl px-6 py-4 shadow-sm text-center min-w-[140px]">
+          <p class="text-brand font-heading font-bold text-2xl">94%</p>
+          <p class="text-gray-500 text-xs mt-1">detecção EPI</p>
+        </div>
+        <div class="bg-white rounded-xl px-6 py-4 shadow-sm text-center min-w-[140px]">
+          <p class="text-brand font-heading font-bold text-2xl">24/7</p>
+          <p class="text-gray-500 text-xs mt-1">monitoramento</p>
+        </div>
+        <div class="bg-white rounded-xl px-6 py-4 shadow-sm text-center min-w-[140px]">
+          <p class="text-brand font-heading font-bold text-2xl">On-site</p>
+          <p class="text-gray-500 text-xs mt-1">dados ficam com você</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A Dor -->
+  <section class="bg-cream-warm py-20 border-l-4 border-brand">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-4">O problema</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-12">Quanto custa não estar em conformidade?</h2>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-2xl p-8">
+          <p class="text-danger font-heading font-bold text-3xl mb-2">R$6.708</p>
+          <p class="text-gray-600 text-sm">Multa mínima NR-6<br>(EPI — por infração)</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8">
+          <p class="text-danger font-heading font-bold text-3xl mb-2">Interdição</p>
+          <p class="text-gray-600 text-sm">ANVISA pode fechar<br>estabelecimento na hora</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8">
+          <p class="text-danger font-heading font-bold text-3xl mb-2">Processo</p>
+          <p class="text-gray-600 text-sm">Acidente sem EPI =<br>responsabilidade do empregador</p>
+        </div>
+      </div>
+      <p class="text-gray-500 text-sm italic max-w-lg mx-auto">"Ronda humana falha. Supervisor não vê tudo. Câmera sem IA só grava — não avisa."</p>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section id="como-funciona" class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-4">Como funciona</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-16">Três passos. Zero complicação.</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="flex flex-col items-center">
+          <span class="material-symbols-outlined text-4xl text-brand mb-4">videocam</span>
+          <p class="text-brand text-xs font-semibold mb-2">01</p>
+          <h3 class="font-heading font-bold text-lg mb-3">Instala a câmera</h3>
+          <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Qualquer câmera RTSP. A gente cuida do hardware de IA.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="material-symbols-outlined text-4xl text-brand mb-4">analytics</span>
+          <p class="text-brand text-xs font-semibold mb-2">02</p>
+          <h3 class="font-heading font-bold text-lg mb-3">IA monitora 24/7</h3>
+          <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Detecta EPIs, pessoas e anomalias em tempo real.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="material-symbols-outlined text-4xl text-brand mb-4">notification_important</span>
+          <p class="text-brand text-xs font-semibold mb-2">03</p>
+          <h3 class="font-heading font-bold text-lg mb-3">Recebe alertas</h3>
+          <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Telegram, dashboard BI, relatórios automáticos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verticais -->
+  <section id="verticais" class="bg-cream py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-4">Verticais</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-6">Onde a lei exige, a FiscalIA monitora.</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        <div class="bg-white rounded-2xl p-6 text-left border-t-4 border-brand">
+          <p class="text-2xl mb-3">🍽️</p>
+          <h3 class="font-heading font-bold text-lg mb-1">Food-service</h3>
+          <p class="text-gray-400 text-xs font-semibold mb-3">ANVISA + NR-6</p>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Touca, luva, avental, higiene</p>
+          <span class="text-xs font-semibold text-brand bg-brand/10 px-3 py-1 rounded-full">OPERACIONAL</span>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-left border-t-4 border-brand">
+          <p class="text-2xl mb-3">🔨</p>
+          <h3 class="font-heading font-bold text-lg mb-1">Construção</h3>
+          <p class="text-gray-400 text-xs font-semibold mb-3">NR-18 + NR-6</p>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Capacete, colete, bota, cinto</p>
+          <span class="text-xs font-semibold text-brand bg-brand/10 px-3 py-1 rounded-full">DISPONÍVEL</span>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-left border-t-4 border-brand">
+          <p class="text-2xl mb-3">🥩</p>
+          <h3 class="font-heading font-bold text-lg mb-1">Açougues</h3>
+          <p class="text-gray-400 text-xs font-semibold mb-3">ANVISA + NR-6</p>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Luvas, avental, touca, bota</p>
+          <span class="text-xs font-semibold text-brand bg-brand/10 px-3 py-1 rounded-full">DISPONÍVEL</span>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-left border-t-4 border-gray-200">
+          <p class="text-2xl mb-3">🏭</p>
+          <h3 class="font-heading font-bold text-lg mb-1">Fábricas</h3>
+          <p class="text-gray-400 text-xs font-semibold mb-3">NR-6 + NR-12</p>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">EPI industrial, perímetro</p>
+          <span class="text-xs font-semibold text-gray-400 bg-gray-100 px-3 py-1 rounded-full">EM BREVE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="bg-white py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-4">Demo</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-12">Veja a FiscalIA em ação.</h2>
+      <div class="bg-dark rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+        <div class="flex items-center gap-2 px-4 py-3 bg-dark border-b border-gray-700">
+          <div class="flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
+          <div class="flex-1 text-center">
+            <span class="text-gray-400 text-xs">FiscalIA — Dashboard</span>
+          </div>
+        </div>
+        <div class="p-6 bg-gray-900">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div class="bg-gray-800 rounded-xl p-4">
+              <p class="text-gray-400 text-xs mb-1">Compliance EPI</p>
+              <p class="text-green-400 font-heading font-bold text-3xl">94%</p>
+              <p class="text-gray-500 text-xs mt-1">EPIs detectados corretamente</p>
+            </div>
+            <div class="bg-gray-800 rounded-xl p-4">
+              <p class="text-gray-400 text-xs mb-1">Alertas 24h</p>
+              <p class="text-brand font-heading font-bold text-3xl">7</p>
+              <p class="text-gray-500 text-xs mt-1">violações enviadas via Telegram</p>
+            </div>
+            <div class="bg-gray-800 rounded-xl p-4">
+              <p class="text-gray-400 text-xs mb-1">Estoque</p>
+              <p class="text-yellow-400 font-heading font-bold text-3xl">3</p>
+              <p class="text-gray-500 text-xs mt-1">itens vencendo esta semana</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-800 rounded-xl p-4">
+              <p class="text-gray-400 text-xs mb-3">Câmera ao vivo — Cozinha 01</p>
+              <div class="bg-gray-700 rounded-lg h-48 flex items-center justify-center">
+                <span class="text-gray-500 text-sm">Feed RTSP + YOLO overlay</span>
+              </div>
+            </div>
+            <div class="bg-gray-800 rounded-xl p-4">
+              <p class="text-gray-400 text-xs mb-3">Forecast Estoque</p>
+              <ul class="space-y-2 text-sm">
+                <li class="text-gray-300 flex justify-between">Mussarela <span class="text-red-400">acaba em 2 dias</span></li>
+                <li class="text-gray-300 flex justify-between">Frango <span class="text-yellow-400">12 dias</span></li>
+                <li class="text-gray-300 flex justify-between">Tomate <span class="text-green-400">6 dias</span></li>
+                <li class="text-gray-300 flex justify-between">Farinha <span class="text-green-400">20 dias</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="bg-cream py-20">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-4">Contato</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Pronto pra ficar em conformidade?</h2>
+      <p class="text-gray-600 mb-10">Preenche o formulário e a gente agenda uma demo pro seu negócio.</p>
+      <form action="https://formspree.io/f/FORM_ID" method="POST" class="max-w-md mx-auto text-left space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1.5">Nome</label>
+            <input type="text" name="name" required placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1.5">WhatsApp</label>
+            <input type="tel" name="whatsapp" required placeholder="(00) 00000-0000" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand">
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1.5">Email</label>
+          <input type="email" name="email" required placeholder="seu@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1.5">Vertical</label>
+          <select name="vertical" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand bg-white">
+            <option value="food-service">Food-service</option>
+            <option value="construcao">Construção civil</option>
+            <option value="acougue">Açougues / Frigoríficos</option>
+            <option value="fabrica">Fábricas</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1.5 text-danger">Já foi multado?</label>
+          <select name="ja_multado" class="w-full px-4 py-3 rounded-xl border border-red-200 text-sm focus:outline-none focus:ring-2 focus:ring-danger/30 focus:border-danger bg-white">
+            <option value="">Selecione...</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+            <option value="nao-sei">Não sei</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1.5">Mensagem <span class="text-gray-400 font-normal">(opcional)</span></label>
+          <textarea name="message" rows="3" placeholder="Conte um pouco sobre a sua operação" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-semibold py-3.5 rounded-full transition">Solicitar demo</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark py-6">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <svg class="w-6 h-6" viewBox="0 0 32 32"><path d="M16 1L3 7v8c0 8.3 5.5 16 13 18 7.5-2 13-9.7 13-18V7L16 1z" fill="#ff6b35"/></svg>
+        <span class="text-white font-heading font-bold text-sm">FiscalIA</span>
+      </div>
+      <p class="text-gray-500 text-sm">&copy; 2026 JHabib 2.0</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante — descomentar quando tiver número comercial
+  <a href="https://wa.me/PHONE_NUMBER" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition z-50" aria-label="Fale pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2C6.486 2 2.003 6.485 2.003 12.004c0 1.76.46 3.478 1.333 4.992L2 22l5.233-1.237c1.46.796 3.103 1.214 4.771 1.214 5.518 0 9.998-4.483 9.998-10.001C22.002 6.458 17.522 2 12.004 2z"/></svg>
+  </a>
+  -->
+
+</body>
+</html>
