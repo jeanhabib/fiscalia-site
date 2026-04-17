@@ -6,6 +6,15 @@
   <title>FiscaliA | Conformidade que não depende de gente</title>
   <meta name="description" content="Monitoramento contínuo de EPIs e normas regulatórias com IA on-premise. NR-6, NR-18, ANVISA. 24/7. Sem ronda humana.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z50QX2RB9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Z50QX2RB9');
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -233,7 +242,10 @@
       <p class="text-brand font-semibold text-xs tracking-[0.2em] uppercase mb-4">Contato</p>
       <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">Pronto pra ficar em conformidade?</h2>
       <p class="text-gray-600 mb-10">Preenche o formulário e a gente agenda uma demo pro seu negócio.</p>
-      <form action="mailto:jean.habib@soul-cycle.com" method="POST" enctype="text/plain" class="max-w-md mx-auto text-left space-y-4">
+      <form action="https://formspree.io/f/meevadyw" method="POST" class="max-w-md mx-auto text-left space-y-4">
+        <input type="hidden" name="_subject" value="FiscaliA — nova solicitação de demo">
+        <input type="hidden" name="_next" value="https://jeanhabib.github.io/fiscalia-site/?sent=1">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-sm font-medium mb-1.5">Nome</label>
@@ -287,11 +299,28 @@
     </div>
   </footer>
 
-  <!-- WhatsApp flutuante — descomentar quando tiver número comercial
-  <a href="https://wa.me/PHONE_NUMBER" target="_blank" rel="noopener" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition z-50" aria-label="Fale pelo WhatsApp">
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5511981619689?text=Oi!%20Vim%20do%20site%20da%20FiscaliA%20e%20quero%20saber%20mais." target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','whatsapp_click',{source:'floating_button'});" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition z-50" aria-label="Fale pelo WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2C6.486 2 2.003 6.485 2.003 12.004c0 1.76.46 3.478 1.333 4.992L2 22l5.233-1.237c1.46.796 3.103 1.214 4.771 1.214 5.518 0 9.998-4.483 9.998-10.001C22.002 6.458 17.522 2 12.004 2z"/></svg>
   </a>
-  -->
+
+  <!-- Form submit tracking + post-submit toast (Formspree redirects to ?sent=1) -->
+  <script>
+    document.querySelector('#contato form')?.addEventListener('submit', function(e){
+      if(window.gtag){
+        var vertical = this.querySelector('[name=vertical]')?.value;
+        var jaMultado = this.querySelector('[name=ja_multado]')?.value;
+        gtag('event','generate_lead',{vertical:vertical,ja_multado:jaMultado});
+      }
+    });
+    if(new URLSearchParams(location.search).get('sent')==='1'){
+      var toast=document.createElement('div');
+      toast.className='fixed top-24 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg z-50 text-sm font-semibold';
+      toast.textContent='Recebido! A gente entra em contato em breve.';
+      document.body.appendChild(toast);
+      setTimeout(function(){toast.remove();history.replaceState({},'',location.pathname);},5000);
+    }
+  </script>
 
 </body>
 </html>
