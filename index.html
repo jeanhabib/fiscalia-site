@@ -266,6 +266,34 @@
     </div>
   </section>
 
+  <!-- Lead Magnet: Checklist NR-6 -->
+  <section id="lead-magnet" class="bg-white py-20 border-t border-gray-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-xl mb-4">
+        <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mb-3">Antes da demo, conheça o risco.</h2>
+      <p class="text-gray-600 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+        Quais EPIs sua operação é obrigada a ter, quais multas você arrisca e onde a IA automatiza a ronda. 1 página, sem juridiquês.
+      </p>
+      <form id="lead-magnet-form" action="https://formspree.io/f/mwvannve" method="POST" class="max-w-lg mx-auto flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" required placeholder="seu@email.com" class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:border-brand focus:outline-none focus:ring-2 focus:ring-orange-200">
+        <input type="hidden" name="_subject" value="Novo download checklist NR-6">
+        <input type="hidden" name="_next" value="https://jeanhabib.github.io/fiscalia-site/assets/checklist-nr6.pdf">
+        <button type="submit" class="bg-brand text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition whitespace-nowrap">
+          Baixar PDF →
+        </button>
+      </form>
+      <p class="text-xs text-gray-500 mt-4">
+        Dados protegidos pela LGPD. Sem spam. ·
+        <button type="button" onclick="document.getElementById('privacy-modal').showModal()" class="underline hover:text-brand">Política de Privacidade</button>
+      </p>
+      <p class="text-sm mt-6">
+        <a href="checklist-nr6.html" class="text-gray-500 hover:text-brand underline">Ou leia online →</a>
+      </p>
+    </div>
+  </section>
+
   <!-- Contato -->
   <section id="contato" class="bg-cream py-20">
     <div class="max-w-2xl mx-auto px-6 text-center">
@@ -370,6 +398,11 @@
         var vertical = this.querySelector('[name=vertical]')?.value;
         var jaMultado = this.querySelector('[name=ja_multado]')?.value;
         gtag('event','generate_lead',{vertical:vertical,ja_multado:jaMultado});
+      }
+    });
+    document.getElementById('lead-magnet-form')?.addEventListener('submit', function(){
+      if(typeof gtag==='function'){
+        gtag('event','download_checklist',{event_category:'engagement',event_label:'checklist-nr6'});
       }
     });
     if(new URLSearchParams(location.search).get('sent')==='1'){
