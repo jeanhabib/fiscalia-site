@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist NR-6: EPI obrigatório food-service, construção, açougue, fábrica | FiscaliA</title>
+  <meta name="description" content="Checklist NR-6 em 1 página: EPIs obrigatórios por vertical (food-service, construção, açougue, fábrica), obrigações do empregador, multas e como automatizar a fiscalização com IA.">
+  <meta name="author" content="FiscaliA / JHabib 2.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Checklist NR-6 multi-vertical | FiscaliA">
+  <meta property="og:description" content="EPIs obrigatórios, multas e fiscalização automatizada por IA. 1 página, sem juridiquês.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jeanhabib.github.io/fiscalia-site/checklist-nr6.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg">
+
+  <!-- Tailwind CDN (mesmo do site) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#ff6b35',
+            'cream': '#f8f5f0',
+            'cream-warm': '#f0ebe0',
+            dark: '#1a1a1a',
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Print CSS: garante layout A4 retrato em 1 página -->
+  <style>
+    @media print {
+      @page { size: A4 portrait; margin: 14mm; }
+      body { font-size: 10pt; }
+      .no-print { display: none !important; }
+      section { page-break-inside: avoid; }
+    }
+    body { font-family: 'Inter', sans-serif; color: #1a1a1a; }
+    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Voltar / imprimir (não aparece no PDF) -->
+  <div class="no-print max-w-4xl mx-auto px-6 pt-4 flex justify-between text-sm">
+    <a href="/fiscalia-site/" class="text-gray-500 hover:text-brand">← Voltar ao site</a>
+    <a href="/fiscalia-site/assets/checklist-nr6.pdf" class="text-brand font-semibold">Baixar em PDF ↓</a>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-6 py-8">
+
+    <!-- Header -->
+    <header class="border-b-4 border-brand pb-4 mb-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="inline-block w-10 h-10 bg-brand rounded"></span>
+        <span class="font-heading font-bold text-xl">FiscaliA</span>
+      </div>
+      <h1 class="font-heading font-bold text-3xl md:text-4xl">Checklist NR-6 — Compliance de EPI multi-vertical</h1>
+      <p class="text-gray-600 mt-2">Food-service · Construção · Açougue · Fábrica</p>
+    </header>
+
+    <!-- Por que importa -->
+    <section class="mb-6">
+      <h2 class="font-heading font-bold text-xl mb-2">Por que isso importa</h2>
+      <p class="text-sm leading-relaxed">
+        A NR-6 (Portaria 3.214/78) obriga o empregador a <strong>fornecer, treinar e fiscalizar</strong>
+        o uso de EPI. Não cumprir expõe a empresa a multas por item, embargo da operação e
+        responsabilização civil/criminal em caso de acidente.
+      </p>
+    </section>
+
+    <!-- Tabela de EPIs por vertical -->
+    <section class="mb-6">
+      <h2 class="font-heading font-bold text-xl mb-3">EPIs obrigatórios por vertical</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead class="bg-cream-warm">
+            <tr>
+              <th class="border border-gray-300 px-3 py-2 text-left">Vertical</th>
+              <th class="border border-gray-300 px-3 py-2 text-left">Regulação</th>
+              <th class="border border-gray-300 px-3 py-2 text-left">EPIs mínimos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-3 py-2 font-semibold">Food-service</td>
+              <td class="border border-gray-300 px-3 py-2">NR-6 + ANVISA RDC 216</td>
+              <td class="border border-gray-300 px-3 py-2">Touca · Luva · Avental · Bota antiderrapante</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-3 py-2 font-semibold">Construção</td>
+              <td class="border border-gray-300 px-3 py-2">NR-6 + NR-18</td>
+              <td class="border border-gray-300 px-3 py-2">Capacete · Colete refletivo · Bota · Cinto trava-quedas (altura)</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-3 py-2 font-semibold">Açougue / frigorífico</td>
+              <td class="border border-gray-300 px-3 py-2">NR-6 + ANVISA</td>
+              <td class="border border-gray-300 px-3 py-2">Luva de malha de aço · Avental · Touca · Bota impermeável</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 px-3 py-2 font-semibold">Fábrica / indústria</td>
+              <td class="border border-gray-300 px-3 py-2">NR-6 + NR-12</td>
+              <td class="border border-gray-300 px-3 py-2">EPI conforme risco (auditivo, respiratório, químico) · Controle de perímetro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Obrigações -->
+    <section class="mb-6">
+      <h2 class="font-heading font-bold text-xl mb-3">Obrigações do empregador (checklist)</h2>
+      <ul class="text-sm space-y-1">
+        <li>☐ Fornecer EPI adequado ao risco, <strong>gratuitamente</strong></li>
+        <li>☐ Treinar o colaborador sobre uso correto, guarda e conservação</li>
+        <li>☐ Fiscalizar o uso efetivo durante a jornada</li>
+        <li>☐ Trocar EPI danificado, extraviado ou com CA vencido</li>
+        <li>☐ Registrar entrega em ficha individual (NR-6 item 6.6.1-h)</li>
+        <li>☐ Exigir EPI com <strong>CA (Certificado de Aprovação) válido</strong></li>
+        <li>☐ Responsabilizar-se pela higienização e conservação periódica</li>
+      </ul>
+    </section>
+
+    <!-- Multas -->
+    <section class="mb-6 bg-cream-warm border-l-4 border-brand p-4">
+      <h2 class="font-heading font-bold text-xl mb-2">Multas e penalidades</h2>
+      <p class="text-sm leading-relaxed">
+        <strong>R$ 670 a R$ 6.700 por item</strong> descumprido (Portaria MTP 667/2021, valores atualizados).
+        <strong>Dobra em reincidência.</strong> Em caso grave, <strong>embargo = parada total</strong>
+        da operação até regularização. Em acidente com EPI ausente ou inadequado, há
+        responsabilização solidária do empregador em ação trabalhista e possível ação penal.
+      </p>
+    </section>
+
+    <!-- Como a IA monitora -->
+    <section class="mb-6 border border-gray-300 rounded-xl p-4">
+      <h2 class="font-heading font-bold text-xl mb-2">Como a FiscaliA automatiza a fiscalização</h2>
+      <p class="text-sm leading-relaxed mb-3">
+        Câmera + visão computacional (YOLO) detecta EPI ausente ou incorreto em tempo real.
+        Alerta em <strong>&lt;2 segundos</strong> no painel e WhatsApp do gestor. Sem ronda humana.
+        Histórico auditável pra defesa em fiscalização.
+      </p>
+      <a href="/fiscalia-site/#contato" class="inline-block bg-brand text-white font-semibold px-5 py-2 rounded-lg text-sm hover:bg-orange-600 transition">
+        Agende uma demo →
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-3 text-xs text-gray-500">
+      <p>
+        <strong>FiscaliA</strong> é uma marca da JHabib 2.0 · CNPJ 11.674.872/0001-51 · Versão 1.0 (abril/2026)
+      </p>
+      <p class="mt-1">
+        Fonte: NR-6 Portaria MTb 3.214/78 (atualizada) — <a href="https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/inspecao-do-trabalho/seguranca-e-saude-no-trabalho/normas-regulamentadoras" class="text-gray-600 hover:text-brand">gov.br/trabalho</a>.
+        Este checklist é um resumo didático e não substitui consultoria jurídica especializada.
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
